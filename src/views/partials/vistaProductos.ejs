@@ -1,0 +1,33 @@
+         <div class="container mt-5 mb-5 py-5">
+            <h2 class="h1 mt-5 text-primary text-center fw-bold mb-5">Vista de Productos</h2>
+            <% if(items.length > 0) {%>
+
+            <div class="row pb-5 mb-4">
+                <% items.forEach((item) =>{ %>  
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <!-- Card-->
+                    <div class="card rounded shadow-sm border-0">
+                        <div class="card-body p-4"><img src="<%= item.thumbnail %>" alt="<%= item.title%>" class="img-fluid d-block mx-auto mb-3">
+                    <h2 class="text-success"><%= item.title %></h2>
+                    <h3 class="text-primary"><%= item.price%></h3>
+                    <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <ul class="list-inline small">
+                            <li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+                            <li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+                            <li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+                            <li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+                            <li class="list-inline-item m-0"><i class="fa fa-star-o text-warning"></i></li>
+                        </ul>
+                        </div>
+                    </div>
+               
+                </div>
+                <% })%>
+            </div>
+      
+            <% } else { %>
+                <div class="alert alert-warning" role="alert">
+                   <h2 class="text-center">No se encontraron datos!</h2> 
+                </div>
+            <% } %>
+        </div>

@@ -1,0 +1,27 @@
+ <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="mt-5 text-primary text-center fw-bold">Ingresar Producto</h2>
+                <form action="/productos" method="post" class="mt-5" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="titleProduct" class="form-label">Producto</label>
+                            <input type="text" name="title" class="form-control" id="titleProduct" placeholder="Agregar el nombre del producto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="priceProduct" class="form-label">Precio</label>
+                            <input type="text" name= "price" class="form-control" id="priceProduct" placeholder="Agregar el precio del producto">
+                        </div>
+                        <div class="mb-3">
+
+                            <label for="formFile" class="form-label">Imagen del Producto</label>
+                            <input type="file" name="image" class="form-control" id="formFile" placeholder="Adjuntar la imagen del producto">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary">Agregar Producto</button>
+                        </div>
+                    </form>
+
+            </div>
+        </div>
+
+    </div>
